@@ -1,20 +1,67 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outer Pen</title>
     <style>
+        :root {
+            --bg-main: #06080c;
+            --accent-glow: #6366f1;
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+        }
+        
         body {
-            background-color: #06080c;
-            color: #f9fafb;
+            background-color: var(--bg-main);
+            color: var(--text-main);
             font-family: system-ui, -apple-system, sans-serif;
             margin: 0;
+            padding: 60px 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            box-sizing: border-box;
         }
+
+        .hero {
+            text-align: center;
+            max-width: 650px;
+            animation: fadeIn 1.2s ease-out;
+        }
+
         h1 {
-            font-size: 3re
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            letter-spacing: -0.05em;
+            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Outer Pen</h1>
+        <p class="tagline">Foundational community hub, development crew, and core identity shaping our next expansion jump.</p>
+    </header>
+
+</body>
+</html>
