@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outer Pen Studio</title>
+    <style>
+        :root {
+            --bg-main: #06080c;
+            --bg-card: #0d121d;
+            --accent-glow: #6366f1;
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+        }
+        
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Hero Splash Entry */
+        .hero {
+            text-align: center;
+            max-width: 650px;
+            margin-bottom: 60px;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            letter-spacing: -0.05em;
+            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Project Cards Alignment */
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 60px;
+            animation: fadeIn 1.6s ease-out;
+        }
+
+        .project-box {
+            background-color: var(--bg-card);
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: border-color 0.3s, transform 0.2s;
+        }
+
+        .project-box:hover {
+            border-color: var(--accent-glow);
+            transform: translateY(-2px);
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(99, 102, 241, 0.15);
+            color: #c7d2fe;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin: 0 0 12px 0;
+            font-weight: 700;
+        }
+
+        p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Live Progress Threshold Tracker */
+        .milestone-panel {
+            background: linear-gradient(145deg, #0f1322, #070a12);
+            border: 1px solid #232942;
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-out;
+        }
+
+        .bar-container {
+            background-color: #1e293b;
+            height: 14px;
+            border-radius: 9999px;
+            margin: 24px 0 12px 0;
+            overflow: hidden;
+            border: 1px solid #334155;
+        }
+
+        .bar-fill {
+            background: linear-gradient(90deg, #4f46e5, #818cf8);
+            width: 10%; /* Initial visual tracking chunk toward 1K */
+            height: 100%;
+            border-radius: 9999px;
+            box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+        }
+
+        .goal-text {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #a5b4fc;
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Studio Presentation Header -->
+    <header class="hero">
+        <h1>Outer Pen</h1>
+        <p class="tagline">Foundational community hub, development crew, and core identity shaping our next expansion jump.</p>
+    </header>
+
+    <!-- Priority Infrastructure Grid -->
+    <main class="matrix-grid">
+        <div class="project-box">
+            <span class="badge">Priority Two</span>
+            <h2>Voxel</h2>
+            <p>An independent, immersive voxel-based framework engine engineered to anchor our custom spatial game mechanics.</p>
+        </div>
+
+        <div class="project-box">
+            <span class="badge">Ecosystem Module</span>
+            <h2>Nations</h2>
+            <p>A social gaming environment framework tailored entirely for interactive virtual room ecosystems and community creation.</p>
+        </div>
+    </main>
+
+    <!-- Launch Metrics Target Panel -->
+    <section class="milestone-panel">
+        <h2>Network Milestone Tracker</h2>
+        <p>Monitoring verified entry metrics leading up to our initial platform server deployment.</p>
+        <div class="bar-container">
+            <div class="bar-fill"></div>
+        </div>
+        <p class="goal-text">Current Project Objective: 1,000 Verified Members</p>
+    </section>
+
+</body>
+</html>
